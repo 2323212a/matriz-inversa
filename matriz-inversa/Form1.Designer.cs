@@ -30,13 +30,14 @@
         {
             this.btnmatriz2x2 = new System.Windows.Forms.Button();
             this.btnmatriz3x3 = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnmatriz2x2
             // 
-            this.btnmatriz2x2.Location = new System.Drawing.Point(108, 111);
+            this.btnmatriz2x2.Location = new System.Drawing.Point(220, 157);
             this.btnmatriz2x2.Name = "btnmatriz2x2";
-            this.btnmatriz2x2.Size = new System.Drawing.Size(75, 30);
+            this.btnmatriz2x2.Size = new System.Drawing.Size(77, 53);
             this.btnmatriz2x2.TabIndex = 0;
             this.btnmatriz2x2.Text = "2x2";
             this.btnmatriz2x2.UseVisualStyleBackColor = true;
@@ -44,19 +45,30 @@
             // 
             // btnmatriz3x3
             // 
-            this.btnmatriz3x3.Location = new System.Drawing.Point(231, 111);
+            this.btnmatriz3x3.Location = new System.Drawing.Point(451, 157);
             this.btnmatriz3x3.Name = "btnmatriz3x3";
-            this.btnmatriz3x3.Size = new System.Drawing.Size(75, 30);
+            this.btnmatriz3x3.Size = new System.Drawing.Size(78, 53);
             this.btnmatriz3x3.TabIndex = 1;
             this.btnmatriz3x3.Text = "3x3";
             this.btnmatriz3x3.UseVisualStyleBackColor = true;
             this.btnmatriz3x3.Click += new System.EventHandler(this.btnmatriz3x3_Click_1);
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Location = new System.Drawing.Point(584, 370);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(151, 41);
+            this.btnsalir.TabIndex = 2;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnsalir);
             this.Controls.Add(this.btnmatriz3x3);
             this.Controls.Add(this.btnmatriz2x2);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnmatriz2x2;
         private System.Windows.Forms.Button btnmatriz3x3;
+        private System.Windows.Forms.Button btnsalir;
     }
 }
 

@@ -37,6 +37,10 @@
             this.lblResult11 = new System.Windows.Forms.Label();
             this.lblResult01 = new System.Windows.Forms.Label();
             this.lblResult10 = new System.Windows.Forms.Label();
+            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtA11
@@ -113,11 +117,55 @@
             this.lblResult10.TabIndex = 9;
             this.lblResult10.Text = "label4";
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(201, 140);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpiar.TabIndex = 10;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Location = new System.Drawing.Point(343, 140);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(85, 31);
+            this.btnsalir.TabIndex = 11;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.Location = new System.Drawing.Point(640, 392);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(104, 28);
+            this.btnsiguiente.TabIndex = 12;
+            this.btnsiguiente.Text = "Siguiente";
+            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
+            // btnvolver
+            // 
+            this.btnvolver.Location = new System.Drawing.Point(29, 392);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(75, 23);
+            this.btnvolver.TabIndex = 13;
+            this.btnvolver.Text = "Volver";
+            this.btnvolver.UseVisualStyleBackColor = true;
+            this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
+            // 
             // matriz2x2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnvolver);
+            this.Controls.Add(this.btnsiguiente);
+            this.Controls.Add(this.btnsalir);
+            this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.lblResult10);
             this.Controls.Add(this.lblResult01);
             this.Controls.Add(this.lblResult11);
@@ -129,7 +177,7 @@
             this.Controls.Add(this.txtA11);
             this.Name = "matriz2x2";
             this.Text = "matriz2x2";
-            this.Load += new System.EventHandler(this.matriz2x2_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +194,9 @@
         private System.Windows.Forms.Label lblResult11;
         private System.Windows.Forms.Label lblResult01;
         private System.Windows.Forms.Label lblResult10;
+        private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnsiguiente;
+        private System.Windows.Forms.Button btnvolver;
     }
 }

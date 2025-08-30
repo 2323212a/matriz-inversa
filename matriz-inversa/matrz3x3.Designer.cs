@@ -47,6 +47,10 @@
             this.lbl20 = new System.Windows.Forms.Label();
             this.lbl21 = new System.Windows.Forms.Label();
             this.lbl22 = new System.Windows.Forms.Label();
+            this.btnlimpiar = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btnvolver = new System.Windows.Forms.Button();
+            this.btnsiguiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt00
@@ -116,7 +120,7 @@
             // 
             this.btnCalcular.Location = new System.Drawing.Point(103, 197);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(100, 30);
             this.btnCalcular.TabIndex = 9;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -203,11 +207,52 @@
             this.lbl22.TabIndex = 18;
             this.lbl22.Text = "label9";
             // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(226, 197);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(88, 30);
+            this.btnlimpiar.TabIndex = 19;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.Location = new System.Drawing.Point(350, 197);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(84, 30);
+            this.btnsalir.TabIndex = 20;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.UseVisualStyleBackColor = true;
+            // 
+            // btnvolver
+            // 
+            this.btnvolver.Location = new System.Drawing.Point(25, 402);
+            this.btnvolver.Name = "btnvolver";
+            this.btnvolver.Size = new System.Drawing.Size(107, 23);
+            this.btnvolver.TabIndex = 21;
+            this.btnvolver.Text = "Volver";
+            this.btnvolver.UseVisualStyleBackColor = true;
+            // 
+            // btnsiguiente
+            // 
+            this.btnsiguiente.Location = new System.Drawing.Point(673, 402);
+            this.btnsiguiente.Name = "btnsiguiente";
+            this.btnsiguiente.Size = new System.Drawing.Size(99, 23);
+            this.btnsiguiente.TabIndex = 22;
+            this.btnsiguiente.Text = "Siguiente";
+            this.btnsiguiente.UseVisualStyleBackColor = true;
+            this.btnsiguiente.Click += new System.EventHandler(this.btnsiguiente_Click);
+            // 
             // matrz3x3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnsiguiente);
+            this.Controls.Add(this.btnvolver);
+            this.Controls.Add(this.btnsalir);
+            this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.lbl22);
             this.Controls.Add(this.lbl21);
             this.Controls.Add(this.lbl20);
@@ -255,5 +300,9 @@
         private System.Windows.Forms.Label lbl20;
         private System.Windows.Forms.Label lbl21;
         private System.Windows.Forms.Label lbl22;
+        private System.Windows.Forms.Button btnlimpiar;
+        private System.Windows.Forms.Button btnsalir;
+        private System.Windows.Forms.Button btnvolver;
+        private System.Windows.Forms.Button btnsiguiente;
     }
 }

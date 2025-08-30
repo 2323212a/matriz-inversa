@@ -34,5 +34,10 @@ namespace matriz_inversa
             matrz3x3 form = new matrz3x3();
             form.ShowDialog();
         }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
