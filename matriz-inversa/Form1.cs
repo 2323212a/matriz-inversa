@@ -23,12 +23,6 @@ namespace matriz_inversa
             form.ShowDialog();
 
         }
-
-        private void btnmatriz3x3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnmatriz3x3_Click_1(object sender, EventArgs e)
         {
             matrz3x3 form = new matrz3x3();
