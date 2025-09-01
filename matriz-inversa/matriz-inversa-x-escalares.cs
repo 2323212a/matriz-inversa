@@ -15,15 +15,20 @@ namespace matriz_inversa
     {
         private Fraccion[,] inversaFraccion;
 
+        private double[,] matrizOriginal;
+        private double[] vectorB;
+
         public matriz_inversa_x_escalares()
         {
             InitializeComponent();
         }
 
-        public matriz_inversa_x_escalares(Fraccion[,] inversa)
+        public matriz_inversa_x_escalares(Fraccion[,] inversa, double[,] original, double[] b)
         {
             InitializeComponent();
             inversaFraccion = inversa;
+            matrizOriginal = original;
+            vectorB = b;
             MostrarInversa();
         }
 
@@ -75,6 +80,9 @@ namespace matriz_inversa
 
         private void btnregresar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            matrz3x3 matriz3x3 = new matrz3x3();
+            matriz3x3.ShowDialog();
             this.Close();
         }
 
@@ -88,7 +96,13 @@ namespace matriz_inversa
             string ruta = @"C:\Users\Public\procedimiento_matriz3x3.txt";
             using (StreamWriter sw = new StreamWriter(ruta))
             {
-                sw.WriteLine(" === MATRIZ INVERSA 3x3 ===");
+                sw.WriteLine("=== ECUACIÓN ORIGINAL ===");
+                for (int i = 0; i < 3; i++)
+                {
+                    sw.WriteLine($"{matrizOriginal[i,0]}·x₁ + {matrizOriginal[i,1]}·x₂ + {matrizOriginal[i,2]}·x₃ = {vectorB[i]}");
+                }
+
+                sw.WriteLine("\n=== MATRIZ INVERSA 3x3 ===");
                 for (int i = 0; i < 3; i++)
                 {
                     sw.WriteLine($"{inversaFraccion[i, 0]}\t{inversaFraccion[i, 1]}\t{inversaFraccion[i, 2]}");
@@ -120,6 +134,10 @@ namespace matriz_inversa
             {
                 MessageBox.Show("El archivo no existe. Primero guarda el procedimiento.");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

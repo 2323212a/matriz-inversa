@@ -84,24 +84,23 @@
             this.lblresultado.AutoSize = true;
             this.lblresultado.Location = new System.Drawing.Point(424, 32);
             this.lblresultado.Name = "lblresultado";
-            this.lblresultado.Size = new System.Drawing.Size(44, 16);
+            this.lblresultado.Size = new System.Drawing.Size(0, 16);
             this.lblresultado.TabIndex = 4;
-            this.lblresultado.Text = "label5";
+            this.lblresultado.Click += new System.EventHandler(this.lblresultado_Click);
             // 
             // lblresultado2
             // 
             this.lblresultado2.AutoSize = true;
             this.lblresultado2.Location = new System.Drawing.Point(424, 66);
             this.lblresultado2.Name = "lblresultado2";
-            this.lblresultado2.Size = new System.Drawing.Size(44, 16);
+            this.lblresultado2.Size = new System.Drawing.Size(0, 16);
             this.lblresultado2.TabIndex = 5;
-            this.lblresultado2.Text = "label6";
             // 
             // btncalcular
             // 
-            this.btncalcular.Location = new System.Drawing.Point(78, 130);
+            this.btncalcular.Location = new System.Drawing.Point(82, 130);
             this.btncalcular.Name = "btncalcular";
-            this.btncalcular.Size = new System.Drawing.Size(75, 23);
+            this.btncalcular.Size = new System.Drawing.Size(75, 33);
             this.btncalcular.TabIndex = 6;
             this.btncalcular.Text = "calcular";
             this.btncalcular.UseVisualStyleBackColor = true;
@@ -123,9 +122,9 @@
             // 
             // btnregresar
             // 
-            this.btnregresar.Location = new System.Drawing.Point(60, 381);
+            this.btnregresar.Location = new System.Drawing.Point(60, 367);
             this.btnregresar.Name = "btnregresar";
-            this.btnregresar.Size = new System.Drawing.Size(75, 23);
+            this.btnregresar.Size = new System.Drawing.Size(75, 37);
             this.btnregresar.TabIndex = 9;
             this.btnregresar.Text = "regresar";
             this.btnregresar.UseVisualStyleBackColor = true;
@@ -133,9 +132,9 @@
             // 
             // btnfinalizar
             // 
-            this.btnfinalizar.Location = new System.Drawing.Point(679, 376);
+            this.btnfinalizar.Location = new System.Drawing.Point(679, 367);
             this.btnfinalizar.Name = "btnfinalizar";
-            this.btnfinalizar.Size = new System.Drawing.Size(75, 23);
+            this.btnfinalizar.Size = new System.Drawing.Size(75, 32);
             this.btnfinalizar.TabIndex = 10;
             this.btnfinalizar.Text = "finalizar";
             this.btnfinalizar.UseVisualStyleBackColor = true;
@@ -145,7 +144,7 @@
             // 
             this.btnguardar.Location = new System.Drawing.Point(197, 130);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 23);
+            this.btnguardar.Size = new System.Drawing.Size(75, 33);
             this.btnguardar.TabIndex = 11;
             this.btnguardar.Text = "guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -153,9 +152,9 @@
             // 
             // btnabrir
             // 
-            this.btnabrir.Location = new System.Drawing.Point(313, 129);
+            this.btnabrir.Location = new System.Drawing.Point(309, 130);
             this.btnabrir.Name = "btnabrir";
-            this.btnabrir.Size = new System.Drawing.Size(75, 23);
+            this.btnabrir.Size = new System.Drawing.Size(75, 33);
             this.btnabrir.TabIndex = 12;
             this.btnabrir.Text = "ver";
             this.btnabrir.UseVisualStyleBackColor = true;

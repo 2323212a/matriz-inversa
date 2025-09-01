@@ -18,16 +18,20 @@ namespace matriz_inversa
         private Fraccion[,] inversaFraccion;
         private double escalar1, escalar2;
         private Fraccion resultadoX1, resultadoX2;
+        private double[,] matrizOriginal;
+        private double[] vectorB;
 
         public matriz_inversa_x_escalar2x2()
         {
             InitializeComponent();
         }
 
-        public matriz_inversa_x_escalar2x2(Fraccion[,] inversa)
+        public matriz_inversa_x_escalar2x2(Fraccion[,] inversa, double[,] original, double[] b)
         {
             InitializeComponent();
             inversaFraccion = inversa;
+            matrizOriginal = original;
+            vectorB = b;
 
             // Mostrar la inversa en los labels
             lblResult00.Text = inversaFraccion[0, 0].ToString();
@@ -62,17 +66,23 @@ namespace matriz_inversa
 
                 using (StreamWriter sw = new StreamWriter(ruta))
                 {
-                    sw.WriteLine("=== MATRIZ INVERSA ===");
+                    sw.WriteLine("=== ECUACIÓN ORIGINAL ===");
+                    for (int i = 0; i < 2; i++)
+                    {
+                        sw.WriteLine($"{matrizOriginal[i,0]}·x₁ + {matrizOriginal[i,1]}·x₂ = {vectorB[i]}");
+                    }
+
+                    sw.WriteLine("\n=== MATRIZ INVERSA ===");
                     sw.WriteLine($"{inversaFraccion[0, 0],10}  {inversaFraccion[0, 1],10}");
                     sw.WriteLine($"{inversaFraccion[1, 0],10}  {inversaFraccion[1, 1],10}");
 
                     sw.WriteLine("\n=== VECTOR B ===");
-                    sw.WriteLine($"b₁ = {escalar1}");
-                    sw.WriteLine($"b₂ = {escalar2}");
+                    sw.WriteLine($"b₁ = {vectorB[0]}");
+                    sw.WriteLine($"b₂ = {vectorB[1]}");
 
                     sw.WriteLine("\n=== MULTIPLICACIÓN INVERSA × VECTOR ===");
-                    sw.WriteLine($"x₁ = ({inversaFraccion[0, 0]} × {escalar1}) + ({inversaFraccion[0, 1]} × {escalar2}) = {resultadoX1} ({resultadoX1.ADecimal():F2})");
-                    sw.WriteLine($"x₂ = ({inversaFraccion[1, 0]} × {escalar1}) + ({inversaFraccion[1, 1]} × {escalar2}) = {resultadoX2} ({resultadoX2.ADecimal():F2})");
+                    sw.WriteLine($"x₁ = ({inversaFraccion[0, 0]} × {vectorB[0]}) + ({inversaFraccion[0, 1]} × {vectorB[1]}) = {resultadoX1} ({resultadoX1.ADecimal():F2})");
+                    sw.WriteLine($"x₂ = ({inversaFraccion[1, 0]} × {vectorB[0]}) + ({inversaFraccion[1, 1]} × {vectorB[1]}) = {resultadoX2} ({resultadoX2.ADecimal():F2})");
 
                     sw.WriteLine("\n=== RESULTADOS ===");
                     sw.WriteLine($"x₁ = {resultadoX1} ({resultadoX1.ADecimal():F2})");
@@ -103,6 +113,11 @@ namespace matriz_inversa
             }
         }
 
+        private void lblresultado_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnfinalizar_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -110,7 +125,11 @@ namespace matriz_inversa
 
         private void btnregresar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            matriz2x2 matriz2X2 = new matriz2x2();
+            matriz2X2.ShowDialog();
             this.Close();
+
         }
     }
 }

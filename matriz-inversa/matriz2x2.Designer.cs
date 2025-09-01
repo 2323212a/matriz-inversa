@@ -41,6 +41,8 @@
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnsiguiente = new System.Windows.Forms.Button();
             this.btnvolver = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtA11
@@ -75,7 +77,7 @@
             // 
             this.btnCalcular.Location = new System.Drawing.Point(86, 140);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.Size = new System.Drawing.Size(82, 31);
             this.btnCalcular.TabIndex = 4;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -86,42 +88,38 @@
             this.lblResult00.AutoSize = true;
             this.lblResult00.Location = new System.Drawing.Point(340, 40);
             this.lblResult00.Name = "lblResult00";
-            this.lblResult00.Size = new System.Drawing.Size(44, 16);
+            this.lblResult00.Size = new System.Drawing.Size(0, 16);
             this.lblResult00.TabIndex = 6;
-            this.lblResult00.Text = "label1";
             // 
             // lblResult11
             // 
             this.lblResult11.AutoSize = true;
             this.lblResult11.Location = new System.Drawing.Point(407, 83);
             this.lblResult11.Name = "lblResult11";
-            this.lblResult11.Size = new System.Drawing.Size(44, 16);
+            this.lblResult11.Size = new System.Drawing.Size(0, 16);
             this.lblResult11.TabIndex = 7;
-            this.lblResult11.Text = "label2";
             // 
             // lblResult01
             // 
             this.lblResult01.AutoSize = true;
             this.lblResult01.Location = new System.Drawing.Point(407, 40);
             this.lblResult01.Name = "lblResult01";
-            this.lblResult01.Size = new System.Drawing.Size(44, 16);
+            this.lblResult01.Size = new System.Drawing.Size(0, 16);
             this.lblResult01.TabIndex = 8;
-            this.lblResult01.Text = "label3";
             // 
             // lblResult10
             // 
             this.lblResult10.AutoSize = true;
             this.lblResult10.Location = new System.Drawing.Point(340, 80);
             this.lblResult10.Name = "lblResult10";
-            this.lblResult10.Size = new System.Drawing.Size(44, 16);
+            this.lblResult10.Size = new System.Drawing.Size(0, 16);
             this.lblResult10.TabIndex = 9;
-            this.lblResult10.Text = "label4";
             // 
             // btnlimpiar
             // 
             this.btnlimpiar.Location = new System.Drawing.Point(201, 140);
             this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpiar.Size = new System.Drawing.Size(80, 31);
             this.btnlimpiar.TabIndex = 10;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
@@ -139,9 +137,9 @@
             // 
             // btnsiguiente
             // 
-            this.btnsiguiente.Location = new System.Drawing.Point(640, 392);
+            this.btnsiguiente.Location = new System.Drawing.Point(640, 385);
             this.btnsiguiente.Name = "btnsiguiente";
-            this.btnsiguiente.Size = new System.Drawing.Size(104, 28);
+            this.btnsiguiente.Size = new System.Drawing.Size(104, 35);
             this.btnsiguiente.TabIndex = 12;
             this.btnsiguiente.Text = "Siguiente";
             this.btnsiguiente.UseVisualStyleBackColor = true;
@@ -149,19 +147,39 @@
             // 
             // btnvolver
             // 
-            this.btnvolver.Location = new System.Drawing.Point(29, 392);
+            this.btnvolver.Location = new System.Drawing.Point(29, 385);
             this.btnvolver.Name = "btnvolver";
-            this.btnvolver.Size = new System.Drawing.Size(75, 23);
+            this.btnvolver.Size = new System.Drawing.Size(75, 35);
             this.btnvolver.TabIndex = 13;
             this.btnvolver.Text = "Volver";
             this.btnvolver.UseVisualStyleBackColor = true;
             this.btnvolver.Click += new System.EventHandler(this.btnvolver_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(125, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 16);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "X";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(241, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Y";
             // 
             // matriz2x2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnvolver);
             this.Controls.Add(this.btnsiguiente);
             this.Controls.Add(this.btnsalir);
@@ -177,7 +195,6 @@
             this.Controls.Add(this.txtA11);
             this.Name = "matriz2x2";
             this.Text = "matriz2x2";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,5 +215,7 @@
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Button btnsiguiente;
         private System.Windows.Forms.Button btnvolver;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

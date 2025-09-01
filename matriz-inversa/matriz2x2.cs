@@ -84,7 +84,9 @@ namespace matriz_inversa
 
         private void btnvolver_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form1 form1 = new Form1();
+            form1.ShowDialog();
             this.Close();
         }
 
@@ -96,9 +98,18 @@ namespace matriz_inversa
                 return;
             }
 
-            matriz_inversa_x_escalar2x2 formEscalar = new matriz_inversa_x_escalar2x2(inversaActual);
-            formEscalar.Show();
+            // Obtén los valores de la matriz y el vector B
+            double[,] original = new double[2, 2]
+            {
+                { double.Parse(txtA11.Text), double.Parse(txtA12.Text) },
+                { double.Parse(txtA21.Text), double.Parse(txtA22.Text) }
+            };
+            double[] b = new double[2] { 0, 0 }; // O usa valores por defecto si aún no tienes los escalares
+
             this.Hide();
+            matriz_inversa_x_escalar2x2 formEscalar = new matriz_inversa_x_escalar2x2(inversaActual, original, b);
+            formEscalar.ShowDialog();
+            this.Close();
         }
     }
 }

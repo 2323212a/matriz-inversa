@@ -19,19 +19,24 @@ namespace matriz_inversa
 
         private void btnmatriz2x2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             matriz2x2 form = new matriz2x2();
             form.ShowDialog();
-
+            this.Close();
         }
+
         private void btnmatriz3x3_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             matrz3x3 form = new matrz3x3();
             form.ShowDialog();
+            this.Close();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
             Close();
         }
+        
     }
 }

@@ -104,10 +104,64 @@ namespace matriz_inversa
                 return;
             }
 
-            // Crea y abre el siguiente formulario, pasándole la inversa
-            matriz_inversa_x_escalares siguiente = new matriz_inversa_x_escalares(inversaFraccion);
-            siguiente.Show();
+            // Captura los valores originales
+            double[,] original = new double[3, 3]
+            {
+                { double.Parse(txt00.Text), double.Parse(txt01.Text), double.Parse(txt02.Text) },
+                { double.Parse(txt10.Text), double.Parse(txt11.Text), double.Parse(txt12.Text) },
+                { double.Parse(txt20.Text), double.Parse(txt21.Text), double.Parse(txt22.Text) }
+            };
+            double[] b = new double[3]
+            {
+                // Si tienes los TextBox para el vector B, cámbialos aquí
+                0, 0, 0
+            };
+
             this.Hide();
+            matriz_inversa_x_escalares siguiente = new matriz_inversa_x_escalares(inversaFraccion, original, b);
+            siguiente.ShowDialog();
+            this.Close();
+        }
+
+        private void btnvolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Close();
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            txt00.Text = "";
+            txt01.Text = "";
+            txt02.Text = "";
+            txt10.Text = "";
+            txt11.Text = "";
+            txt12.Text = "";
+            txt20.Text = "";
+            txt21.Text = "";
+            txt22.Text = "";
+
+            lbl00.Text = "";
+            lbl01.Text = "";
+            lbl02.Text = "";
+            lbl20.Text = "";
+            lbl21.Text = "";
+            lbl22.Text = "";
+            lbl10.Text = "";
+            lbl11.Text = "";
+            lbl12.Text = "";
+        }
+
+        private void btnsalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void matrz3x3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

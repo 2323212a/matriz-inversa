@@ -53,7 +53,7 @@
             // lblResult00
             // 
             this.lblResult00.AutoSize = true;
-            this.lblResult00.Location = new System.Drawing.Point(81, 54);
+            this.lblResult00.Location = new System.Drawing.Point(61, 54);
             this.lblResult00.Name = "lblResult00";
             this.lblResult00.Size = new System.Drawing.Size(44, 16);
             this.lblResult00.TabIndex = 0;
@@ -62,7 +62,7 @@
             // lblResult10
             // 
             this.lblResult10.AutoSize = true;
-            this.lblResult10.Location = new System.Drawing.Point(81, 92);
+            this.lblResult10.Location = new System.Drawing.Point(61, 92);
             this.lblResult10.Name = "lblResult10";
             this.lblResult10.Size = new System.Drawing.Size(44, 16);
             this.lblResult10.TabIndex = 1;
@@ -71,7 +71,7 @@
             // lblResult20
             // 
             this.lblResult20.AutoSize = true;
-            this.lblResult20.Location = new System.Drawing.Point(81, 133);
+            this.lblResult20.Location = new System.Drawing.Point(61, 133);
             this.lblResult20.Name = "lblResult20";
             this.lblResult20.Size = new System.Drawing.Size(44, 16);
             this.lblResult20.TabIndex = 2;
@@ -157,33 +157,30 @@
             this.lblX1.AutoSize = true;
             this.lblX1.Location = new System.Drawing.Point(499, 48);
             this.lblX1.Name = "lblX1";
-            this.lblX1.Size = new System.Drawing.Size(51, 16);
+            this.lblX1.Size = new System.Drawing.Size(0, 16);
             this.lblX1.TabIndex = 12;
-            this.lblX1.Text = "label10";
             // 
             // lblX2
             // 
             this.lblX2.AutoSize = true;
             this.lblX2.Location = new System.Drawing.Point(499, 89);
             this.lblX2.Name = "lblX2";
-            this.lblX2.Size = new System.Drawing.Size(51, 16);
+            this.lblX2.Size = new System.Drawing.Size(0, 16);
             this.lblX2.TabIndex = 13;
-            this.lblX2.Text = "label11";
             // 
             // lblX3
             // 
             this.lblX3.AutoSize = true;
             this.lblX3.Location = new System.Drawing.Point(499, 130);
             this.lblX3.Name = "lblX3";
-            this.lblX3.Size = new System.Drawing.Size(51, 16);
+            this.lblX3.Size = new System.Drawing.Size(0, 16);
             this.lblX3.TabIndex = 14;
-            this.lblX3.Text = "label12";
             // 
             // btncalcular
             // 
-            this.btncalcular.Location = new System.Drawing.Point(93, 179);
+            this.btncalcular.Location = new System.Drawing.Point(93, 194);
             this.btncalcular.Name = "btncalcular";
-            this.btncalcular.Size = new System.Drawing.Size(103, 45);
+            this.btncalcular.Size = new System.Drawing.Size(103, 30);
             this.btncalcular.TabIndex = 15;
             this.btncalcular.Text = "Calcular";
             this.btncalcular.UseVisualStyleBackColor = true;
@@ -213,7 +210,7 @@
             // 
             this.btnguardar.Location = new System.Drawing.Point(239, 194);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 23);
+            this.btnguardar.Size = new System.Drawing.Size(78, 30);
             this.btnguardar.TabIndex = 18;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
@@ -221,9 +218,9 @@
             // 
             // btnabrir
             // 
-            this.btnabrir.Location = new System.Drawing.Point(371, 201);
+            this.btnabrir.Location = new System.Drawing.Point(371, 194);
             this.btnabrir.Name = "btnabrir";
-            this.btnabrir.Size = new System.Drawing.Size(75, 23);
+            this.btnabrir.Size = new System.Drawing.Size(75, 30);
             this.btnabrir.TabIndex = 19;
             this.btnabrir.Text = "Ver";
             this.btnabrir.UseVisualStyleBackColor = true;
